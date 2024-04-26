@@ -25,6 +25,11 @@ body {
     font-family: "Josefin Sans", sans-serif;
     background-image: linear-gradient( 135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
     max-width: 100%;
+    background-size: cover;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; */
     min-height: 100vh;
     overflow: hidden;
 }
@@ -96,7 +101,7 @@ body {
     outline: none;
     padding: 10px;
     border-radius: 30px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--DesaturatedRed);
     border: 1px solid var(--DesaturatedRed);
 }
