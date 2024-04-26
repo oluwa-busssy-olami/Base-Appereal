@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Manrope:wght@200..800&family=Overpass:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap");
+:root {
+    --DesaturatedRed: hsl(0, 36%, 70%);
+    --SoftRed: hsl(0, 93%, 68%);
+    --DarkGrayishRed: hsl(0, 6%, 24%);
+    --LinearMobile: hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+    --Linear: hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* img {
+    max-width: 100%;
+} */
+
+p {
+    font-size: 0.9rem;
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+    background-image: linear-gradient( 135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    max-width: 100%;
+}
+
+.main-container {
+    width: 375px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo {
+    padding: 30px;
+}
+
+.img-container {
+    background-image: url("images/hero-desktop.jpg");
+    background-size: cover;
+    /* background-position: bottom 20px right 130px; */
+    background-repeat: no-repeat;
+    width: calc(100% + 80px);
+    height: 345px;
+    overflow: hidden;
+}
+
+.text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: ;
+}
