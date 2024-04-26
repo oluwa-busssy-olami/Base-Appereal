@@ -26,6 +26,8 @@ body {
     font-family: "Josefin Sans", sans-serif;
     background-image: linear-gradient( 135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
     max-width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 .main-container {
@@ -45,9 +47,9 @@ body {
     background-size: cover;
     /* background-position: bottom 20px right 130px; */
     background-repeat: no-repeat;
-    width: calc(100% + 80px);
+    width: calc(100% + 73px);
     height: 345px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .text-container {
@@ -55,5 +57,92 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: ;
+    margin-top: 60px;
+    flex-direction: column;
+}
+
+.text-container h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 8px;
+    color: var(--DesaturatedRed);
+}
+
+.text-container h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 8px;
+    color: var(--DarkGrayishRed);
+}
+
+.coming-soon p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: var(--DesaturatedRed);
+    line-height: 1.2;
+    letter-spacing: 1px;
+    padding: 0 0 0 10px;
+    font-weight: 300;
+}
+
+.email-button {
+    margin-top: 20px;
+    position: relative;
+}
+
+.email-button input {
+    width: calc(100% + 40px);
+    outline: none;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    color: var(--DesaturatedRed);
+    border: 1px solid var(--DesaturatedRed);
+}
+
+input::placeholder {
+    color: var(--DesaturatedRed);
+    font-size: 0.8rem;
+}
+
+.email-button button {
+    width: 80px;
+    height: 50px;
+    /* Set a width for the image */
+    /* height: 0; */
+    /* Make the image height zero to hide it */
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    /* Background color for the "invisible" image */
+    /* display: block; */
+    position: absolute;
+    top: 0;
+    left: 250px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    outline: none;
+}
+
+.icon-arrow {
+    text-align: center;
+    width: 10px;
+}
+
+.error-message {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--SoftRed);
+}
+
+.icon-error {
+    position: absolute;
+    top: 10px;
+    left: 230px;
+    width: 20px;
+}
+
+.hidden {
+    display: none;
 }
