@@ -41,13 +41,14 @@ body {
 .main-container {
   min-width: 375px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
   flex-direction: column;
 }
 
 .logo {
   padding: 30px;
+  width: 100%;
 }
 
 .img-container {
@@ -56,7 +57,7 @@ body {
   /* background-position: bottom 20px right 130px; */
   background-repeat: no-repeat;
   width: 100%;
-  height: 325px;
+  height: 305px;
   /* overflow: hidden; */
 }
 
@@ -65,8 +66,9 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  max-width: 100%;
   margin-top: 40px;
-  /* padding: 20px; */
+  padding: 10px;
   flex-direction: column;
 }
 
@@ -87,13 +89,13 @@ body {
 }
 
 .coming-soon p {
-  margin-top: 10px;
-  font-size: 1rem;
+  margin-top: 20px;
+  font-size: 0.9rem;
   color: var(--DesaturatedRed);
-  line-height: 1.2;
+  line-height: 1.7;
   letter-spacing: 1px;
-  padding: 0 0 0 10px;
-  font-weight: 300;
+  /* padding: 0 0 0 10px; */
+  font-weight: 600;
 }
 
 .email-button {
@@ -103,35 +105,32 @@ body {
 
 input {
   max-width: 100%;
+  width: 305px;
   outline: none;
   margin-top: 30px;
-  padding: 10px 50px;
+  padding: 20px;
   border-radius: 30px;
   font-size: 1rem;
-  color: var(--DesaturatedRed);
-  border: 1px solid var(--DesaturatedRed);
+  color: hsl(0, 39%, 77%);
+  border: 1px solid hsl(0, 39%, 77%);
 }
 
 input::placeholder {
-  color: var(--DesaturatedRed);
-  font-size: 0.8rem;
+  color: hsl(0, 32%, 87%);
+  font-size: 0.9rem;
+  letter-spacing: 1;
 }
 
 .email-button button {
   width: 80px;
-  height: 50px;
-  /* Set a width for the image */
-  /* height: 0; */
-  /* Make the image height zero to hide it */
+  height: 60px;
   background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-  /* Background color for the "invisible" image */
-  /* display: block; */
   position: absolute;
   top: 27px;
   left: 250px;
   border: none;
   outline: none;
-  border-radius: 25px;
+  border-radius: 30px;
   outline: none;
 }
 
@@ -141,14 +140,14 @@ input::placeholder {
 }
 
 .error-message {
-  margin: 0;
-  font-size: 0.8rem;
+  margin: 6px;
+  font-size: 0.9rem;
   color: var(--SoftRed);
 }
 
 .icon-error {
   position: absolute;
-  top: 40px;
+  top: 50px;
   left: 230px;
   width: 20px;
 }
