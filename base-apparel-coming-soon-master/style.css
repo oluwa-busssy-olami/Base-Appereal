@@ -39,10 +39,9 @@ body {
 }
 
 .main-container {
-  /* max-width: 1440px; */
   display: flex;
   justify-content: space-between;
-  /* flex-shrink: 1; */
+  /* align-items: baseline; */
 }
 
 .logo {
@@ -50,8 +49,10 @@ body {
 }
 
 .text-container {
-  width: 40%;
-  margin: 25px 530px 25px 250px;
+  width: 60%;
+  max-width: 60%;
+  padding: 25px 400px 25px 200px;
+  /* margin: 0 150px 0 150px; */
 }
 
 .coming-soon h1 {
@@ -132,7 +133,7 @@ button {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   .logo {
     display: block;
     margin: 30px;
@@ -142,6 +143,7 @@ button {
   }
   .main-container {
     flex-direction: column-reverse;
+    overflow: hidden;
     /* margin: 10px; */
   }
   .img-container {
@@ -150,7 +152,7 @@ button {
     background-size: cover;
     /* background-position: center; */
     width: 100%;
-    height: 350px;
+    height: 300px;
   }
   .text-container {
     text-align: center;
@@ -159,7 +161,8 @@ button {
     margin: 0;
   }
   .coming-soon h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    letter-spacing: 15px;
     margin-top: 40px;
   }
   .coming-soon p {
@@ -171,15 +174,18 @@ button {
     position: relative;
   }
   input {
-    width: 90%;
+    /* width: 90%; */
   }
   button {
     position: absolute;
-    right: -20px;
-    padding: 10px 25px;
+    right: -10px;
+    padding: 15px 35px;
     border-radius: 20px;
   }
   .icon-error {
-    right: 50px;
+    right: 80px;
+  }
+  .error-message {
+    font-size: 0.87rem;
   }
 }
