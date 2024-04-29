@@ -12,10 +12,11 @@ input.addEventListener("input", (e) => {
   } else if (!/^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(inputValue)) {
     error_message.textContent = "Enter a valid gmail";
     input.style.border = "1px solid red";
-    icon_error.classList.remove(hidden);
+    icon_error.style.display = "block";
   } else {
     error_message.textContent = "";
     input.style.border = "";
+    icon_error.style.display = "none";
   }
 });
 button.addEventListener("click", (e) => {
@@ -28,6 +29,6 @@ button.addEventListener("click", (e) => {
     error_message.textContent = "Enter a valid gmail";
     input.style.border = "1px solid red";
   } else {
-    error_message.textContent = `Congratulations ${inputValue}`;
+    error_message.textContent = `Thank you, ${inputValue}! We'll keep you updated.`;
   }
 });

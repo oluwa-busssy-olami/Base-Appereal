@@ -21,15 +21,15 @@
       <img src="images/logo.svg" alt="" class="circle" />
     </header>
     <main class="main-container">
-      <section class="img-container">
-        <!-- <img src="images/hero-mobile.jpg" alt="" /> -->
-        <!-- Backgrond image -->
-      </section>
       <section class="text-container">
-        <img src="images/logo.svg" class="desktop-logo" alt="" />
+        <div class="desktop-logo-container">
+          <img src="images/logo.svg" class="desktop-logo" alt="" />
+        </div>
         <div class="coming-soon">
-          <h1 class="coming-soon-text">We're</h1>
-          <h2>Coming <br />Soon</h2>
+          <h1 class="coming-soon-text">
+            We're <br /><span>Coming <br />Soon</span>
+          </h1>
+
           <p>
             Hello fellow shoppers! We're currently building our new fashion
             store. Add your email below to stay up-to-date with announcements
@@ -37,19 +37,25 @@
           </p>
         </div>
         <div class="email-button">
-          <input type="email" class="input" placeholder="Email Address" />
-          <img
-            src="images/icon-error.svg"
-            alt="icon-error"
-            class="icon-error hidden" />
-          <button>
+          <form>
+            <input type="email" class="input" placeholder="Email Address" />
             <img
-              src="images/icon-arrow.svg"
-              alt="icon-arrow"
-              class="icon-arrow" />
-          </button>
-          <p class="error-message"></p>
+              src="images/icon-error.svg"
+              alt="icon-error"
+              class="icon-error hidden" />
+            <button>
+              <img
+                src="images/icon-arrow.svg"
+                alt="icon-arrow"
+                class="icon-arrow" />
+            </button>
+            <p class="error-message"></p>
+          </form>
         </div>
+      </section>
+      <section class="img-container">
+        <!-- <img src="images/hero-mobile.jpg" alt="" /> -->
+        <!-- Backgrond image -->
       </section>
     </main>
     <!-- <footer>

@@ -23,163 +23,163 @@ p {
 
 body {
   font-family: "Josefin Sans", sans-serif;
-  background-image: linear-gradient(
-    135deg,
-    hsl(0, 0%, 100%),
-    hsl(0, 100%, 98%)
-  );
   max-width: 100%;
+  font-size: 16px;
+  background: url(images/bg-pattern-desktop.svg);
   background-size: cover;
-  /* display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; */
-  min-height: 100vh;
-  /* overflow: hidden; */
-}
-
-.main-container {
-  max-width: 600px;
-  display: flex;
-  /* justify-content: center;
-  align-items: center; */
-  flex-direction: column;
-}
-
-.logo {
-  padding: 30px;
-  width: 100%;
+  background-repeat: no-repeat;
 }
 
 .img-container {
-  background-image: url("images/hero-mobile.jpg");
+  background: url(images/hero-desktop.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  /* background-position: bottom 20px right 130px; */
   width: 100%;
-  height: 305px;
-  /* overflow: hidden; */
+  height: 100vh;
 }
 
-.text-container {
+.main-container {
+  /* max-width: 1440px; */
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  max-width: 100%;
-  margin-top: 40px;
-  padding: 10px;
-  flex-direction: column;
+  justify-content: space-between;
+  /* flex-shrink: 1; */
 }
 
-.desktop-logo {
+.logo {
   display: none;
 }
 
-.text-container h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  font-weight: 300;
-  letter-spacing: 8px;
-  color: var(--DesaturatedRed);
+.text-container {
+  width: 40%;
+  margin: 25px 530px 25px 250px;
 }
 
-.text-container h2 {
-  font-size: 3rem;
+.coming-soon h1 {
+  font-size: 4rem;
   text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 8px;
+  font-weight: 300;
+  letter-spacing: 18px;
+  color: hsl(0, 63%, 63%);
+  /* line-height: 3px; */
+}
+
+.coming-soon span {
   color: var(--DarkGrayishRed);
+  font-weight: 600;
+}
+
+.desktop-logo-container img {
+  width: 150px;
+  margin-bottom: 130px;
 }
 
 .coming-soon p {
-  margin-top: 20px;
-  font-size: 0.9rem;
-  color: var(--DesaturatedRed);
-  line-height: 1.7;
-  letter-spacing: 1px;
-  /* padding: 0 0 0 10px; */
-  font-weight: 600;
+  margin-top: 30px;
+  font-size: 0.98rem;
+  /* letter-spacing: 1px; */
+  line-height: 2;
+  color: hsl(0, 63%, 63%);
 }
 
 .email-button {
-  margin-top: 20px;
+  margin-top: 50px;
   position: relative;
 }
 
 input {
-  max-width: 100%;
-  /* width: 305px; */
-  outline: none;
-  margin-top: 30px;
-  padding: 20px 60px;
+  width: 85%;
+  padding: 15px 20px;
   border-radius: 30px;
+  outline: none;
+  border: none;
+  color: hsl(0, 74%, 74%);
   font-size: 1rem;
-  color: hsl(0, 39%, 77%);
-  border: 1px solid hsl(0, 39%, 77%);
+  border: 1px solid hsl(0, 54%, 79%);
+}
+
+input:focus {
+  border: 1px solid hsl(0, 54%, 79%);
 }
 
 input::placeholder {
-  color: hsl(0, 32%, 87%);
-  font-size: 0.9rem;
-  letter-spacing: 1;
-}
-
-.email-button button {
-  width: 80px;
-  height: 60px;
-  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-  position: absolute;
-  top: 27px;
-  left: 250px;
-  border: none;
-  outline: none;
-  border-radius: 30px;
-  outline: none;
-}
-
-.icon-arrow {
-  text-align: center;
-  width: 10px;
-}
-
-.error-message {
-  margin: 6px;
-  font-size: 0.9rem;
-  color: var(--SoftRed);
+  color: hsl(0, 74%, 74%);
 }
 
 .icon-error {
   position: absolute;
-  top: 50px;
-  left: 230px;
-  width: 20px;
+  right: 120px;
+  top: 16px;
+}
+
+button {
+  background-color: hsl(0, 74%, 74%);
+  padding: 15px 25px;
+  border: none;
+  border-radius: 30px;
+  position: absolute;
+  right: 50px;
+}
+
+.error-message {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: hsl(0, 74%, 74%);
 }
 
 .hidden {
   display: none;
 }
 
-@media (min-width: 768px) {
-  body {
-    background: url(images/bg-pattern-desktop.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
+@media (max-width: 768px) {
   .logo {
+    display: block;
+    margin: 30px;
+  }
+  .desktop-logo-container {
     display: none;
   }
-  .desktop-logo {
-    display: block;
-  }
-  main {
-    display: flex;
-    /* grid-template-columns: 1fr 1fr;
-    direction: rtl;
-    gap: 20px; */
+  .main-container {
+    flex-direction: column-reverse;
+    /* margin: 10px; */
   }
   .img-container {
-    background: url(images/hero-desktop.jpg);
+    background: url(images/hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+    width: 100%;
+    height: 350px;
+  }
+  .text-container {
+    text-align: center;
+    width: 100%;
+    padding: 30px 15px;
+    margin: 0;
+  }
+  .coming-soon h1 {
+    font-size: 3rem;
+    margin-top: 40px;
+  }
+  .coming-soon p {
+    margin-top: 20px;
+    font-size: 0.9rem;
+  }
+  .email-button {
+    margin-top: 30px;
+    position: relative;
+  }
+  input {
+    width: 90%;
+  }
+  button {
+    position: absolute;
+    right: -20px;
+    padding: 10px 25px;
+    border-radius: 20px;
+  }
+  .icon-error {
+    right: 50px;
   }
 }
