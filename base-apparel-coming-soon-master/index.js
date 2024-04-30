@@ -32,4 +32,5 @@ button.addEventListener("click", (e) => {
     error_message.textContent = `Thank you, ${inputValue}! We'll keep you updated.`;
   }
   input.value = "";
+  // error_message.textContent = "";
 });
