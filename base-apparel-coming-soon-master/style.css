@@ -39,8 +39,8 @@ body {
 }
 
 .main-container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   /* align-items: baseline; */
 }
 
@@ -49,9 +49,7 @@ body {
 }
 
 .text-container {
-  width: 60%;
-  /* padding: 25px 400px 25px 200px; */
-  /* margin: 0 150px 0 150px; */
+  width: 500px;
 }
 
 .coming-soon h1 {
@@ -59,7 +57,8 @@ body {
   text-transform: uppercase;
   font-weight: 300;
   letter-spacing: 18px;
-  color: hsl(0, 63%, 63%);
+  color: var(--DesaturatedRed);
+  padding: 0 30px 0 30px;
   /* line-height: 3px; */
 }
 
@@ -69,20 +68,23 @@ body {
 }
 
 .desktop-logo-container img {
-  width: 150px;
+  width: 40%;
+  padding: 30px;
   margin-bottom: 130px;
 }
 
 .coming-soon p {
   margin-top: 30px;
+  padding: 0 30px 0 30px;
   font-size: 0.98rem;
   /* letter-spacing: 1px; */
   line-height: 2;
-  color: hsl(0, 63%, 63%);
+  color: var(--DesaturatedRed);
 }
 
 .email-button {
   margin-top: 50px;
+  padding: 0 30px 0 30px;
   position: relative;
 }
 
@@ -93,7 +95,7 @@ input {
   outline: none;
   border: none;
   color: hsl(0, 74%, 74%);
-  font-size: 1rem;
+  font-size: 0.9rem;
   border: 1px solid hsl(0, 54%, 79%);
 }
 
@@ -103,45 +105,58 @@ input:focus {
 
 input::placeholder {
   color: hsl(0, 74%, 74%);
+  font-size: 0.9rem;
+  font-style: italic;
 }
 
 .icon-error {
   position: absolute;
-  right: 120px;
-  top: 16px;
-}
-
-button {
-  background-color: hsl(0, 74%, 74%);
-  padding: 15px 25px;
-  border: none;
-  border-radius: 30px;
-  position: absolute;
-  right: 50px;
-}
-
-.error-message {
-  font-style: italic;
-  font-weight: 300;
-  font-size: 1.2rem;
-  margin-top: 20px;
-  color: hsl(0, 74%, 74%);
+  right: 170px;
+  top: 12px;
+  width: 20px;
 }
 
 .hidden {
   display: none;
 }
 
-@media (max-width: 868px) {
+button {
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  padding: 15px 30px;
+  transform: translateY(-4.5%);
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  position: absolute;
+  right: 88px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 80%, 90%));
+}
+
+.error-message {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 0.9rem;
+  margin-top: 20px;
+  color: var(--SoftRed);
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: hsl(0, 100%, 98%);
+  }
   .logo {
     display: block;
-    margin: 30px;
+    padding: 25px 30px 0;
   }
   .desktop-logo-container {
     display: none;
   }
   .main-container {
-    flex-direction: column-reverse;
+    grid-template-columns: auto;
     overflow: hidden;
     max-width: 100%;
     /* margin: 10px; */
@@ -150,6 +165,8 @@ button {
     background: url(images/hero-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    grid-row: 1;
+    margin: 2rem 0;
     /* background-position: center; */
     width: 100%;
     height: 300px;
@@ -157,34 +174,35 @@ button {
   .text-container {
     text-align: center;
     width: 100%;
-    /* padding: 30px 15px; */
+    grid-row: 2;
+    margin-bottom: 20px;
   }
   .coming-soon h1 {
-    font-size: 2.5rem;
-    letter-spacing: 15px;
-    margin-top: 40px;
+    font-size: 2.2rem;
+    margin-top: 20px;
   }
   .coming-soon p {
     margin-top: 20px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   .email-button {
     margin-top: 30px;
     position: relative;
   }
   input {
-    /* width: 90%; */
+    width: 100%;
   }
   button {
     position: absolute;
-    right: -10px;
-    padding: 15px 35px;
-    border-radius: 20px;
+    right: 20px;
+    padding: 14px 30px;
+    transform: translateY(-4.5%);
+    border-radius: 30px;
   }
   .icon-error {
-    right: 80px;
+    right: 90px;
   }
   .error-message {
-    font-size: 0.87rem;
+    font-size: 0.8rem;
   }
 }
