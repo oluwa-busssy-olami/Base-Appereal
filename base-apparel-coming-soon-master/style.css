@@ -50,6 +50,7 @@ body {
 
 .text-container {
   width: 500px;
+  margin-left: 30px;
 }
 
 .coming-soon h1 {
@@ -175,6 +176,7 @@ button:hover {
     text-align: center;
     width: 100%;
     grid-row: 2;
+    margin-left: 0;
     margin-bottom: 20px;
   }
   .coming-soon h1 {
